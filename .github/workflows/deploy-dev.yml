@@ -22,6 +22,7 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUB_ID }}
+          region: CentralUS
 
       # Deploy Bicep file
     - name: Deploy the bicep file
@@ -29,6 +30,5 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUB_ID }}
         scope: subscription
-        region: CentralUS
         template: ./main.bicep
         parameters: ./main-dev.parameters.json
