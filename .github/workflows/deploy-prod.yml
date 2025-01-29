@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   
-name: Deploy to Development
+name: Deploy to Production
 
 permissions:
       id-token: write
