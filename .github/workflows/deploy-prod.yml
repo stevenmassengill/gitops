@@ -10,7 +10,7 @@ permissions:
 jobs:
   deploy-infrastructure:
     runs-on: ubuntu-latest
-    environment: DEV
+    environment: PROD
     
     steps:
     - name: Check out the repo
@@ -31,4 +31,4 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUB_ID }}
         region: centralus
         template: ./main.bicep
-        parameters: ./main-dev.parameters.json
+        parameters: ./main-prod.parameters.json
