@@ -27,8 +27,8 @@ jobs:
     - name: Deploy the bicep file
       uses: azure/arm-deploy@v2
       with:
-        subscriptionId: ${{ secrets.AZURE_SUB_ID }}
         scope: subscription
+        subscriptionId: ${{ secrets.AZURE_SUB_ID }}
         region: centralus
         template: ./main.bicep
         parameters: ./main-dev.parameters.json
