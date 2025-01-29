@@ -29,5 +29,6 @@ jobs:
       with:
         subscriptionId: ${{ secrets.AZURE_SUB_ID }}
         scope: subscription
+        region: CentralUS
         template: ./main.bicep
         parameters: ./main-dev.parameters.json
